@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-    <title>Mistri Attendance System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS उपस्थिति प्रणाली (Advanced Attendance System)</title>
     <style>
-        /* यह स्टाइलिंग iframe को पूरी स्क्रीन पर दिखने में मदद करेगी */
+        /* यह स्टाइलिंग सुनिश्चित करती है कि iframe मोबाइल पर पूरी तरह से फिट हो */
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: Arial, sans-serif; }
-        #attendance-frame { width: 100%; height: 100%; border: none; }
+        .header-bar {
+            text-align: center; 
+            padding: 15px 10px; 
+            background: #007bff; 
+            color: white; 
+            font-weight: 600;
+        }
+        #attendance-frame { 
+            width: 100%; 
+            /* 100vh - 50px (हेडर की ऊंचाई) = शेष स्क्रीन की ऊंचाई */
+            height: calc(100vh - 50px); 
+            border: none; 
+            display: block;
+        }
     </style>
 </head>
 <body>
-
+    <div class="header-bar">
+        <h3>दैनिक उपस्थिति और लोकेशन ट्रैकर</h3>
+    </div>
+    
     <iframe 
         id="attendance-frame" 
-        src="https://script.google.com/macros/library/d/1MxiUnb82AaqIHp55LIMqxf9Kolwso4oYlxkBLe3RvDhyMCUBtDCz07Q3/4" 
+        src="https://script.google.com/macros/s/AKfycbyxZjrlee5KArSOk9AzOSX2yKsOpaIOm58BNylVpFRp8XdU-sZ8wa1nGueKmNpXWHPgQQ/exec" 
         title="Project Attendance App">
     </iframe>
 
 </body>
 </html>
-
-
-
